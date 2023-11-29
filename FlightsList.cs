@@ -13,7 +13,7 @@ namespace flights_database
 
         public void AddFlight(Flight_info fl)
         {
-            for (int i = 0;i<100;i++)
+            for (int i = 0;i<flight.Length;i++)
             {
                 if (flight[i] != null)
                 {
@@ -40,7 +40,7 @@ namespace flights_database
         }
         public Flight_info GetFlight_Info(string code)
         {
-            Flight_info f = new Flight_info("","",0);
+            Flight_info f = new Flight_info("a","b",0);
             for (int i = 0; i < 100; i++)
             {
                 if (flight[i] != null)

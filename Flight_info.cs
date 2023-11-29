@@ -12,6 +12,7 @@ namespace flights_database
         private string destination;
         private string flight_code;
         private int seats;
+        private List<Pasajero> pasajeros = new List<Pasajero>();
 
         public Flight_info(string d, string c, int s)
         {
@@ -19,7 +20,6 @@ namespace flights_database
             flight_code = c;
             seats = s;
         }
-
 
         public void SetDestination(string d)
         {
@@ -32,6 +32,10 @@ namespace flights_database
         public void SetSeats(int s)
         {
             seats=s;
+        }
+        private void AddPassenger(Pasajero pas)
+        {
+            pasajeros.Add(pas);
         }
 
         public string GetDestination()

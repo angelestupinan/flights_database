@@ -40,8 +40,23 @@
             destinationC = new TextBox();
             seatsC = new TextBox();
             codeC = new TextBox();
+            panel3 = new Panel();
+            addPas = new Button();
+            idAddPas = new TextBox();
+            ageAddPas = new TextBox();
+            nameAddPas = new TextBox();
+            button2 = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            label4 = new Label();
+            destinationText = new Label();
+            label5 = new Label();
+            capacityText = new Label();
+            label3 = new Label();
+            codeAddPas = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // destinationS
@@ -158,11 +173,141 @@
             codeC.Size = new Size(99, 23);
             codeC.TabIndex = 1;
             // 
+            // panel3
+            // 
+            panel3.Controls.Add(addPas);
+            panel3.Controls.Add(idAddPas);
+            panel3.Controls.Add(ageAddPas);
+            panel3.Controls.Add(nameAddPas);
+            panel3.Controls.Add(button2);
+            panel3.Controls.Add(tableLayoutPanel1);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(codeAddPas);
+            panel3.Location = new Point(414, 12);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(404, 207);
+            panel3.TabIndex = 5;
+            // 
+            // addPas
+            // 
+            addPas.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold | FontStyle.Italic);
+            addPas.Location = new Point(285, 129);
+            addPas.Name = "addPas";
+            addPas.Size = new Size(100, 52);
+            addPas.TabIndex = 10;
+            addPas.Text = "Agregar";
+            addPas.UseVisualStyleBackColor = true;
+            // 
+            // idAddPas
+            // 
+            idAddPas.Location = new Point(14, 158);
+            idAddPas.Name = "idAddPas";
+            idAddPas.PlaceholderText = "Id";
+            idAddPas.Size = new Size(162, 23);
+            idAddPas.TabIndex = 9;
+            // 
+            // ageAddPas
+            // 
+            ageAddPas.Location = new Point(182, 158);
+            ageAddPas.Name = "ageAddPas";
+            ageAddPas.PlaceholderText = "Edad";
+            ageAddPas.Size = new Size(81, 23);
+            ageAddPas.TabIndex = 8;
+            // 
+            // nameAddPas
+            // 
+            nameAddPas.Location = new Point(14, 129);
+            nameAddPas.Name = "nameAddPas";
+            nameAddPas.PlaceholderText = "Nombre";
+            nameAddPas.Size = new Size(249, 23);
+            nameAddPas.TabIndex = 7;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold | FontStyle.Italic);
+            button2.Location = new Point(14, 61);
+            button2.Name = "button2";
+            button2.Size = new Size(110, 36);
+            button2.TabIndex = 6;
+            button2.Text = "Consultar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 39.772728F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60.227272F));
+            tableLayoutPanel1.Controls.Add(label4, 0, 0);
+            tableLayoutPanel1.Controls.Add(destinationText, 1, 0);
+            tableLayoutPanel1.Controls.Add(label5, 0, 1);
+            tableLayoutPanel1.Controls.Add(capacityText, 1, 1);
+            tableLayoutPanel1.Location = new Point(167, 45);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(237, 38);
+            tableLayoutPanel1.TabIndex = 5;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(3, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(53, 15);
+            label4.TabIndex = 4;
+            label4.Text = "Destino: ";
+            // 
+            // destinationText
+            // 
+            destinationText.AutoSize = true;
+            destinationText.Location = new Point(97, 0);
+            destinationText.Name = "destinationText";
+            destinationText.Size = new Size(0, 15);
+            destinationText.TabIndex = 5;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(3, 18);
+            label5.Name = "label5";
+            label5.Size = new Size(63, 15);
+            label5.TabIndex = 6;
+            label5.Text = "Capacidad";
+            // 
+            // capacityText
+            // 
+            capacityText.AutoSize = true;
+            capacityText.Location = new Point(97, 18);
+            capacityText.Name = "capacityText";
+            capacityText.Size = new Size(0, 15);
+            capacityText.TabIndex = 7;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(14, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(223, 29);
+            label3.TabIndex = 3;
+            label3.Text = "Agregar Pasajeros";
+            // 
+            // codeAddPas
+            // 
+            codeAddPas.Location = new Point(14, 30);
+            codeAddPas.Name = "codeAddPas";
+            codeAddPas.PlaceholderText = "Código del vuelo";
+            codeAddPas.Size = new Size(110, 23);
+            codeAddPas.TabIndex = 1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(462, 374);
+            ClientSize = new Size(861, 374);
+            Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Form1";
@@ -171,6 +316,10 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -188,5 +337,18 @@
         private TextBox destinationC;
         private TextBox seatsC;
         private TextBox codeC;
+        private Panel panel3;
+        private Label label3;
+        private TextBox codeAddPas;
+        private Label label4;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label destinationText;
+        private Label label5;
+        private Label capacityText;
+        private Button button2;
+        private TextBox nameAddPas;
+        private TextBox ageAddPas;
+        private TextBox idAddPas;
+        private Button addPas;
     }
 }

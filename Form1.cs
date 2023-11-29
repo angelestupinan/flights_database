@@ -36,5 +36,12 @@ namespace flights_database
             codeC.Text = flc.GetCode();
             seatsC.Text = flc.GetSeats().ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Flight_info flc = fl.GetFlight_Info(codeAddPas.Text.ToUpper());
+            destinationText.Text = flc.GetDestination();
+            capacityText.Text = flc.GetSeats().ToString();
+        }
     }
 }
