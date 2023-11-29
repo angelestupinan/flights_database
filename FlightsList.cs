@@ -15,6 +15,14 @@ namespace flights_database
         {
             for (int i = 0;i<100;i++)
             {
+                if (flight[i] != null)
+                {
+                    if (flight[i].GetCode() == fl.GetCode())
+                    {
+                        MessageBox.Show("El código de vuelo ya existe, utilice otro");
+                        break;
+                    }
+                }
                 if (flight[i]==null)
                 {
                     flight[i] = fl;
