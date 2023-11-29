@@ -32,7 +32,7 @@ namespace flights_database
         }
         public Flight_info GetFlight_Info(string code)
         {
-            Flight_info f = null;
+            Flight_info f = new Flight_info("","",0);
             for (int i = 0; i < 100; i++)
             {
                 if (flight[i] != null)

@@ -30,8 +30,8 @@ namespace flights_database
 
         private void button_2_Click(object sender, EventArgs e)
         {
-            EliminarCampos();
             Flight_info flc = fl.GetFlight_Info(codeC.Text.ToUpper());
+            EliminarCampos();
             destinationC.Text = flc.GetDestination();
             codeC.Text = flc.GetCode();
             seatsC.Text = flc.GetSeats().ToString();
