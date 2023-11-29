@@ -18,18 +18,30 @@ namespace flights_database
                 if (flight[i]==null)
                 {
                     flight[i] = fl;
+                    if (flight[i] != null)
+                    {
+                        MessageBox.Show("Guardado Correctamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se ha alcanzado el limite de vuelos");
+                    }
                     break;
                 }
             }
         }
-        public Flight_info GetFlight_Info(int id)
+        public Flight_info GetFlight_Info(string code)
         {
             Flight_info f = null;
             for (int i = 0; i < 100; i++)
             {
-                if (id == flight[i].GetNumber())
+                if (flight[i] != null)
                 {
-                    f= flight[i];
+                    if (code == flight[i].GetCode())
+                    {
+                        f = flight[i];
+                        break;
+                    }
                 }
             }
 

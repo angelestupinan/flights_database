@@ -12,14 +12,12 @@ namespace flights_database
         private string destination;
         private string flight_code;
         private int seats;
-        public int number;
 
-        public Flight_info(string d, string c, int s, int n)
+        public Flight_info(string d, string c, int s)
         {
             destination = d;
             flight_code = c;
             seats = s;
-            number = n;
         }
 
 
@@ -35,10 +33,6 @@ namespace flights_database
         {
             seats=s;
         }
-        public void SetNumber(int n)
-        {
-            number=n;
-        }
 
         public string GetDestination()
         {
@@ -51,10 +45,6 @@ namespace flights_database
         public int GetSeats()
         {
             return seats;
-        }
-        public int GetNumber()
-        {
-            return number;
         }
 
     }

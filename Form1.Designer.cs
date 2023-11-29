@@ -33,11 +33,9 @@
             seatsS = new TextBox();
             panel1 = new Panel();
             button1 = new Button();
-            numberS = new TextBox();
             label1 = new Label();
             panel2 = new Panel();
             button_2 = new Button();
-            numberC = new TextBox();
             label2 = new Label();
             destinationC = new TextBox();
             seatsC = new TextBox();
@@ -73,7 +71,6 @@
             // panel1
             // 
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(numberS);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(destinationS);
             panel1.Controls.Add(seatsS);
@@ -94,14 +91,6 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // numberS
-            // 
-            numberS.Location = new Point(144, 113);
-            numberS.Name = "numberS";
-            numberS.PlaceholderText = "Número";
-            numberS.Size = new Size(71, 23);
-            numberS.TabIndex = 4;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -115,7 +104,6 @@
             // panel2
             // 
             panel2.Controls.Add(button_2);
-            panel2.Controls.Add(numberC);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(destinationC);
             panel2.Controls.Add(seatsC);
@@ -135,14 +123,6 @@
             button_2.Text = "Consultar";
             button_2.UseVisualStyleBackColor = true;
             button_2.Click += button_2_Click;
-            // 
-            // numberC
-            // 
-            numberC.Location = new Point(14, 32);
-            numberC.Name = "numberC";
-            numberC.PlaceholderText = "Número";
-            numberC.Size = new Size(99, 23);
-            numberC.TabIndex = 4;
             // 
             // label2
             // 
@@ -164,25 +144,25 @@
             // 
             // seatsC
             // 
-            seatsC.Location = new Point(176, 108);
+            seatsC.Location = new Point(176, 70);
             seatsC.Name = "seatsC";
             seatsC.PlaceholderText = "Asientos";
-            seatsC.Size = new Size(71, 23);
+            seatsC.Size = new Size(99, 23);
             seatsC.TabIndex = 2;
             // 
             // codeC
             // 
-            codeC.Location = new Point(176, 70);
+            codeC.Location = new Point(14, 32);
             codeC.Name = "codeC";
             codeC.PlaceholderText = "Código del vuelo";
-            codeC.Size = new Size(201, 23);
+            codeC.Size = new Size(99, 23);
             codeC.TabIndex = 1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(412, 374);
+            ClientSize = new Size(462, 374);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Form1";
@@ -202,10 +182,8 @@
         private Panel panel1;
         private Label label1;
         private Button button1;
-        private TextBox numberS;
         private Panel panel2;
         private Button button_2;
-        private TextBox numberC;
         private Label label2;
         private TextBox destinationC;
         private TextBox seatsC;
