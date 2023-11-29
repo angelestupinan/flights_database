@@ -16,6 +16,9 @@ namespace flights_database
             destinationC.Text = "";
             codeC.Text = "";
             seatsC.Text = "";
+            nameAddPas.Text = "";
+            ageAddPas.Text = "";
+            idAddPas.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,6 +56,7 @@ namespace flights_database
             int age = int.Parse(ageAddPas.Text);
             Pasajero p = new Pasajero(name, age, id, cd);
             flc.AddPassenger(p);
+            listBox1.Items.Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -62,8 +66,9 @@ namespace flights_database
             listBox1.Items.Add("  Nombre  " + "  Edad  " + "  ID  " + "  Codigo de vuelo");
             foreach (var i in pasajeros)
             {
-                listBox1.Items.Add(i.GetName()+"  "+i.GetAge()+"  "+i.GetId()+"  "+i.GetFlightCode());
+
                 listBox1.Items.Add("___________________________");
+                listBox1.Items.Add(i.GetName()+"  "+i.GetAge()+"  "+i.GetId()+"  "+i.GetFlightCode());
             }
         }
     }

@@ -38,6 +38,7 @@ namespace flights_database
         public void AddPassenger(Pasajero pas)
         {
             pasajeros.Add(pas);
+            MessageBox.Show("Agregado con exito");
         }
 
         public string GetDestination()
