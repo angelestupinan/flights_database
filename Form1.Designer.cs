@@ -53,10 +53,16 @@
             capacityText = new Label();
             label3 = new Label();
             codeAddPas = new TextBox();
+            panel4 = new Panel();
+            listBox1 = new ListBox();
+            button3 = new Button();
+            consultPassengers = new TextBox();
+            label6 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // destinationS
@@ -197,6 +203,7 @@
             addPas.TabIndex = 10;
             addPas.Text = "Agregar";
             addPas.UseVisualStyleBackColor = true;
+            addPas.Click += addPas_Click;
             // 
             // idAddPas
             // 
@@ -302,11 +309,61 @@
             codeAddPas.Size = new Size(110, 23);
             codeAddPas.TabIndex = 1;
             // 
+            // panel4
+            // 
+            panel4.Controls.Add(listBox1);
+            panel4.Controls.Add(button3);
+            panel4.Controls.Add(consultPassengers);
+            panel4.Controls.Add(label6);
+            panel4.Location = new Point(414, 225);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(404, 147);
+            panel4.TabIndex = 6;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(130, 34);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(267, 94);
+            listBox1.TabIndex = 8;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold | FontStyle.Italic);
+            button3.Location = new Point(14, 83);
+            button3.Name = "button3";
+            button3.Size = new Size(110, 36);
+            button3.TabIndex = 7;
+            button3.Text = "Consultar";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // consultPassengers
+            // 
+            consultPassengers.Location = new Point(14, 45);
+            consultPassengers.Name = "consultPassengers";
+            consultPassengers.PlaceholderText = "Código del vuelo";
+            consultPassengers.Size = new Size(110, 23);
+            consultPassengers.TabIndex = 5;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(0, -3);
+            label6.Name = "label6";
+            label6.Size = new Size(244, 29);
+            label6.TabIndex = 4;
+            label6.Text = "Consultar Pasajeros";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(861, 374);
+            ClientSize = new Size(823, 374);
+            Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -320,6 +377,8 @@
             panel3.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -350,5 +409,10 @@
         private TextBox ageAddPas;
         private TextBox idAddPas;
         private Button addPas;
+        private Panel panel4;
+        private Label label6;
+        private Button button3;
+        private TextBox consultPassengers;
+        private ListBox listBox1;
     }
 }

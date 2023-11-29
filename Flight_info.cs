@@ -33,7 +33,9 @@ namespace flights_database
         {
             seats=s;
         }
-        private void AddPassenger(Pasajero pas)
+        //añade un elemento a la lista
+
+        public void AddPassenger(Pasajero pas)
         {
             pasajeros.Add(pas);
         }
@@ -50,6 +52,9 @@ namespace flights_database
         {
             return seats;
         }
-
+        public List<Pasajero> GetPassengers()
+        {
+            return pasajeros;
+        }
     }
 }

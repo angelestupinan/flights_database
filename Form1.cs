@@ -43,5 +43,28 @@ namespace flights_database
             destinationText.Text = flc.GetDestination();
             capacityText.Text = flc.GetSeats().ToString();
         }
+
+        private void addPas_Click(object sender, EventArgs e)
+        {
+            Flight_info flc = fl.GetFlight_Info(codeAddPas.Text.ToUpper());
+            string cd = codeAddPas.Text;
+            string name = nameAddPas.Text;
+            int id = int.Parse(idAddPas.Text);
+            int age = int.Parse(ageAddPas.Text);
+            Pasajero p = new Pasajero(name, age, id, cd);
+            flc.AddPassenger(p);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Flight_info flc = fl.GetFlight_Info(consultPassengers.Text.ToUpper());
+            List<Pasajero> pasajeros = flc.GetPassengers();
+            listBox1.Items.Add("  Nombre  " + "  Edad  " + "  ID  " + "  Codigo de vuelo");
+            foreach (var i in pasajeros)
+            {
+                listBox1.Items.Add(i.GetName()+"  "+i.GetAge()+"  "+i.GetId()+"  "+i.GetFlightCode());
+                listBox1.Items.Add("___________________________");
+            }
+        }
     }
 }
