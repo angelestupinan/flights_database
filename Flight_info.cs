@@ -37,8 +37,15 @@ namespace flights_database
 
         public void AddPassenger(Pasajero pas)
         {
-            pasajeros.Add(pas);
-            MessageBox.Show("Agregado con exito");
+            if (pasajeros.Count < seats)
+            {
+                pasajeros.Add(pas);
+                MessageBox.Show("Agregado con exito");
+            }
+            else
+            {
+                MessageBox.Show("Ya no quedan asientos disponibles");
+            }
         }
 
         public string GetDestination()
