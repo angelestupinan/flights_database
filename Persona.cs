@@ -19,30 +19,20 @@ namespace flights_database
             id = i;
         }
 
-        public void SetName(string n)
+        public string Name 
         {
-            name = n;
+            get { return name; }    
+            set { name = value; }
         }
-        public void SetAge(int a)
+        public int Age
         {
-            age = a;
+            get { return age; }
+            set { age = value; }
         }
-        public void SetId(int a)
+        public int Id
         {
-            id = a;
-        }
-
-        public string GetName()
-        {
-            return name;
-        }
-        public int GetAge()
-        {
-            return age;
-        }
-        public int GetId()
-        {
-            return id;
+            get { return id; } 
+            set { id = value;}
         }
     }
 }

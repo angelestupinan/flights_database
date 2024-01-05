@@ -21,18 +21,26 @@ namespace flights_database
             seats = s;
         }
 
-        public void SetDestination(string d)
+        public string Destination
         {
-            destination=d;
+            get { return destination; }
+            set { destination = value; }
         }
-        public void SetFlight_Code(string c)
+        public string Flight_Code
         {
-            flight_code=c;
+            get { return flight_code; }
+            set { flight_code = value; }
         }
-        public void SetSeats(int s)
+        public int Seats
         {
-            seats=s;
+            get { return seats; }
+            set { seats = value; }
         }
+        public List<Pasajero> Pasajeros
+        {
+            get { return pasajeros; }
+        }
+
         //añade un elemento a la lista
 
         public void AddPassenger(Pasajero pas)
@@ -46,23 +54,6 @@ namespace flights_database
             {
                 MessageBox.Show("Ya no quedan asientos disponibles");
             }
-        }
-
-        public string GetDestination()
-        {
-            return destination;
-        }        
-        public string GetCode()
-        {
-            return flight_code;
-        }
-        public int GetSeats()
-        {
-            return seats;
-        }
-        public List<Pasajero> GetPassengers()
-        {
-            return pasajeros;
         }
     }
 }

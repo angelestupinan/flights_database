@@ -35,16 +35,16 @@ namespace flights_database
         {
             Flight_info flc = fl.GetFlight_Info(codeC.Text.ToUpper());
             EliminarCampos();
-            destinationC.Text = flc.GetDestination();
-            codeC.Text = flc.GetCode();
-            seatsC.Text = flc.GetSeats().ToString();
+            destinationC.Text = flc.Destination;
+            codeC.Text = flc.Flight_Code;
+            seatsC.Text = flc.Seats.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Flight_info flc = fl.GetFlight_Info(codeAddPas.Text.ToUpper());
-            destinationText.Text = flc.GetDestination();
-            capacityText.Text = flc.GetSeats().ToString();
+            destinationText.Text = flc.Destination;
+            capacityText.Text = flc.Seats.ToString();
         }
 
         private void addPas_Click(object sender, EventArgs e)
@@ -62,13 +62,13 @@ namespace flights_database
         private void button3_Click(object sender, EventArgs e)
         {
             Flight_info flc = fl.GetFlight_Info(consultPassengers.Text.ToUpper());
-            List<Pasajero> pasajeros = flc.GetPassengers();
+            List<Pasajero> pasajeros = flc.Pasajeros;
             listBox1.Items.Add("  Nombre  " + "  Edad  " + "  ID  " + "  Codigo de vuelo");
             foreach (var i in pasajeros)
             {
 
                 listBox1.Items.Add("___________________________");
-                listBox1.Items.Add(i.GetName()+"  "+i.GetAge()+"  "+i.GetId()+"  "+i.GetFlightCode());
+                listBox1.Items.Add(i.Name+"  "+i.Age+"  "+i.Id+"  "+i.FlightCode);
             }
         }
     }

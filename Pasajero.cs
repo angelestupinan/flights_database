@@ -16,14 +16,10 @@ namespace flights_database
             flightCode = flcd;
         }
 
-        public void SetFlightCode(string flcd)
-        {
-            flightCode = flcd;
-        }
-
-        public string GetFlightCode()
-        {
-            return flightCode;
+        public string FlightCode
+        { 
+            get { return flightCode; }
+            set { flightCode = value; }
         }
     }
 }
